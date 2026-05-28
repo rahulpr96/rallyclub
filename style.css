@@ -618,6 +618,98 @@
                 justify-content: center
             }
 
+            .contact-links {
+                display: grid;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 1rem;
+                margin-top: 2rem;
+                max-width: 860px;
+                margin-left: auto;
+                margin-right: auto;
+                text-align: left
+            }
+
+            .contact-link-item {
+                background: var(--card);
+                border: 1px solid var(--border);
+                padding: 0.9rem 1rem
+            }
+
+            .contact-link-label {
+                display: block;
+                margin-bottom: 0.45rem;
+                font-size: 0.72rem;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+                color: var(--muted)
+            }
+
+            .contact-link-row {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 0.75rem
+            }
+
+            .contact-link-row a {
+                color: var(--white);
+                text-decoration: none;
+                font-size: 0.9rem;
+                word-break: break-word
+            }
+
+            .contact-link-row a:hover {
+                color: var(--blue)
+            }
+
+            .copy-email-btn {
+                display: inline-flex;
+                align-items: center;
+                gap: 0.35rem;
+                background: transparent;
+                border: 1px solid var(--border);
+                color: var(--muted);
+                padding: 0.38rem 0.6rem;
+                cursor: pointer;
+                transition: border-color 0.2s, color 0.2s, background 0.2s;
+                flex-shrink: 0
+            }
+
+            .copy-email-btn:hover {
+                border-color: var(--blue);
+                color: var(--blue)
+            }
+
+            .copy-email-btn svg {
+                width: 0.95rem;
+                height: 0.95rem;
+                fill: none;
+                stroke: currentColor;
+                stroke-width: 1.8;
+                stroke-linecap: round;
+                stroke-linejoin: round
+            }
+
+            .copy-email-text {
+                font-family: 'Barlow Condensed', sans-serif;
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.08em;
+                text-transform: uppercase
+            }
+
+            .copy-email-btn.copied {
+                background: rgba(26, 115, 232, 0.08);
+                border-color: rgba(26, 115, 232, 0.3);
+                color: var(--blue)
+            }
+
+            .contact-handle {
+                margin-top: 0.85rem;
+                font-size: 0.78rem;
+                color: var(--muted)
+            }
+
             /* FOOTER */
             footer {
                 padding: 2rem 2.5rem;
@@ -832,6 +924,15 @@
                 }
 
                 .cta-btns {
+                    flex-direction: column
+                }
+
+                .contact-links {
+                    grid-template-columns: 1fr
+                }
+
+                .contact-link-row {
+                    align-items: flex-start;
                     flex-direction: column
                 }
 

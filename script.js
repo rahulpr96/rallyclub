@@ -9,6 +9,19 @@ const obs = new IntersectionObserver(entries => {
 
 document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 
+const communityLink = [
+  'https://chat.whatsapp.com/',
+  'HXVd3h5cqOAGXOsgkV6X4k',
+  '?mode=gi_t'
+].join('');
+
+document.querySelectorAll('.js-community-link').forEach(link => {
+  link.setAttribute('href', communityLink);
+  link.setAttribute('target', '_blank');
+  link.setAttribute('rel', 'noopener noreferrer');
+  link.setAttribute('referrerpolicy', 'no-referrer');
+});
+
 document.querySelectorAll('.copy-email-btn').forEach(button => {
   button.addEventListener('click', async () => {
     const email = button.dataset.copy;
